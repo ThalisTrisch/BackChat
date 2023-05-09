@@ -58,7 +58,7 @@ app.post('/sendmensagem', async (req,res) =>{
     const criarUser = await Mensagem.create(dadosmensagem)
 })
 
-port = 3001;
+const port = process.env.PORT || 3001;
 app.listen(port, (req,res) =>{
     console.log(`listening in URL: http://localhost:${port}`)
 })
